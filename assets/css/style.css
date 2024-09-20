@@ -1881,3 +1881,61 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+ 
+
+.cvbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.resumebutton {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resumebutton:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.5s ease-in-out;
+}
+
+.resumebutton:hover:before {
+    width: 0;
+    height: 0;
+}
+
+.resumebutton:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.resumebutton:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
